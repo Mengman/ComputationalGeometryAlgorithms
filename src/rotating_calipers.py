@@ -34,6 +34,8 @@ def get_all_antipodal_pairs(cnt):
             q = next_point(cnt, q)
             if (p, q) != (q0, p0):
                 yield p, q
+            else:
+                break
 
         if area(cnt, p, next_point(cnt, p), next_point(cnt, q)) == area(cnt, p, next_point(cnt, p), q):
             if (p, q) != (q0, len(cnt) - 1):
